@@ -13,7 +13,8 @@ steps:
       command: 'custom'
       customcommand: 'install --production'
   - script: |
-      npm install
+      npm install -g npm@latest
+      npm cache clean --force
       npm install uuid@latest
       npm install @popperjs/core
       npm update
