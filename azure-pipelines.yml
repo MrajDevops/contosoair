@@ -6,7 +6,7 @@
 pool:
   vmImage: ubuntu-latest
 trigger:
-  - master
+  - main
 steps:
   - task: Npm@1
     inputs:
