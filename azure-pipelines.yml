@@ -11,9 +11,12 @@ steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customcommand: 'npm install --production'
+      customcommand: 'install --production'
   - script: |
       npm install
+      npm install uuid@latest
+      npm install @popperjs/core
+      npm update
       npm install --save-dev jest
       npm test
     displayName: 'Run unit tests'
